@@ -1,0 +1,67 @@
+---
+import escudoBoca from "../assets/escudo-boca.png";
+import stack from "../assets/stacks-azul.png";
+---
+
+<main>
+   <div class="presentation">
+      <img src={escudoBoca.src} alt="Escudo de Boca Juniors">
+      <h1>Boca Juniors</h1>
+      <p>El club más grande de América</p>
+      <a href="##"><i class='bx bxs-down-arrow' ></i></a>
+   </div>
+</main>   
+<style>
+   main{
+      width: 100%;
+      height: calc(100vh - 74px);
+      overflow-x: hidden;
+      }
+   .presentation{
+      width: 90%;
+      max-width: 900px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -3rem;
+   }
+   .presentation img{
+      width: 55%;
+      max-width: 320px;
+   }
+   .presentation h1{
+      font-size: 2.8rem;
+      color: var(--blue-primary);
+      margin-top: 0.35rem;
+      margin-bottom: 0rem;
+   }
+   .presentation p{
+      font-size: 1.1rem;
+      color: var(--yellow-primary);
+      margin-top: .1rem;
+   }
+   .presentation a{
+      margin-top: .5rem;
+      font-size: 1.25rem;
+      color: #fff;
+      background-color: var(--blue-primary);
+      padding: .5rem 1rem;
+      border-radius: 7px;
+      transition: all 0.2s ease;
+   }
+   .presentation a:hover{
+      background-color: var(--blue-secondary);
+   }
+   .presentation a:active{
+      transform: translateY(4px);
+   }
+
+   @media (min-width: 768px){
+      main{
+         height: calc(100vh - 88px);
+      }
+   }
+</style>

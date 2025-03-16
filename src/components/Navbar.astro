@@ -1,0 +1,89 @@
+---
+import escudoBoca from "../assets/escudo-boca.png";
+---
+
+<nav>
+   <i class='bx bx-menu' ></i>
+   <a href="/"><img src={escudoBoca.src} alt="Escudo de Boca Juniors"></a>
+   <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="##">Club</a></li>
+      <li><a href="##">Idolos</a></li>
+      <li><a href="##">Títulos</a></li>
+      <li><a href="##">Bombonera</a></li>
+   </ul>
+   <div class="social-links">
+      <a href="https://twitter.com/BocaJrsOficial" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter'></i></a>
+      <a href="https://www.instagram.com/bocajrsoficial/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
+  </div>
+</nav>
+
+<style>
+   nav{
+      width: 90%;
+      max-width: 900px;
+      color: var(--blue-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      padding: 1rem 0rem;
+   }
+   nav .bx-menu{
+      font-size: 2.5rem;
+      cursor: pointer;
+   }
+   nav img{
+     display: none;
+   }
+   nav ul{
+      display:none
+   }
+   .social-links a{
+      color: #fff;
+      margin-left: 0.5rem;
+   }
+   .social-links a i{
+      background-color: var(--blue-primary);
+      font-size: 1.85rem;
+      padding: 0.3rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+   }
+   .social-links a i:hover{
+      background-color: var(--blue-secondary);
+      color: var(--yellow-primary);
+      transform: translateY(-4px);
+   }
+   @media (min-width: 768px){
+      nav .bx-menu{
+         display: none;
+      }
+      nav img{
+         display: block;
+         width: 55px;
+         object-fit: cover;
+      }
+      nav ul{
+         display: flex;
+         justify-content: center;
+         list-style: none;
+         padding: 0;
+      }
+      nav ul li{
+         margin-left: 0.8rem;
+      }
+      nav ul li a{
+         text-decoration: none;
+         color: var(--blue-primary);
+         padding: 0.4rem 0.8rem;
+         border-radius: 15px;
+         transition: all 0.15s ease;
+      }
+      nav ul li a:hover{
+         background-color: var(--blue-primary);
+         color: var(--yellow-primary);
+      }
+   }
+
+</style>
