@@ -71,18 +71,39 @@ import escudoBoca from "../assets/escudo-boca.png";
          padding: 0;
       }
       nav ul li{
-         margin-left: 0.8rem;
+         margin-left: 0.5rem;
       }
       nav ul li a{
+         font-size: 1rem;
          text-decoration: none;
          color: var(--blue-primary);
+         text-transform: uppercase;
          padding: 0.4rem 0.8rem;
          border-radius: 15px;
-         transition: all 0.15s ease;
+         transition: all 0.2s ease;
+         position: relative;
+      }
+      nav ul li a::after{
+         content: '';
+         position: absolute;
+         top: -15px;
+         left: calc(50% - 2.5px);
+         width: 5px;
+         height: 5px;
+         border-radius: 50%;
+         background-color: var(--yellow-primary);
+         transition: width 0.3s;
+         opacity: 0;
+         transition: all 0.2s ease;
       }
       nav ul li a:hover{
-         background-color: var(--blue-primary);
+         /* background-color: var(--blue-primary);
+         /* text-decoration: underline; */
          color: var(--yellow-primary);
+      }
+      nav ul li a:hover::after{
+         top: -7px;
+         opacity: 1;
       }
    }
 
