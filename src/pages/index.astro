@@ -3,10 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Main from '../components/Main.astro';
 import Wave from '../components/Wave.astro';
+import Club from '../components/Club.astro';
 ---
 
 <Layout title="Boca Juniors, el más grande de America">
 	<Header />
 	<Main />
-    <Wave color="var(--blue-primary)"/>      
+   <Wave color="var(--blue-primary)"/>
+	<Club />
+	<Wave color="var(--yellow-primary)" background="var(--blue-primary)"/>      
 </Layout>

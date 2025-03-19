@@ -7,7 +7,7 @@ import escudoBoca from "../assets/escudo-boca.png";
    <a href="/"><img src={escudoBoca.src} alt="Escudo de Boca Juniors"></a>
    <ul>
       <li><a href="/">Inicio</a></li>
-      <li><a href="##">Club</a></li>
+      <li><a href="#club">Club</a></li>
       <li><a href="##">Idolos</a></li>
       <li><a href="##">Títulos</a></li>
       <li><a href="##">Bombonera</a></li>
@@ -63,6 +63,10 @@ import escudoBoca from "../assets/escudo-boca.png";
          display: block;
          width: 55px;
          object-fit: cover;
+         transition: all 0.15s ease;
+      }
+      nav img:hover{
+         transform: translateY(-2.5px);
       }
       nav ul{
          display: flex;
@@ -86,20 +90,18 @@ import escudoBoca from "../assets/escudo-boca.png";
       nav ul li a::after{
          content: '';
          position: absolute;
-         top: -15px;
+         top: -17px;
          left: calc(50% - 2.5px);
          width: 5px;
          height: 5px;
          border-radius: 50%;
-         background-color: var(--yellow-primary);
+         background-color: var(--yellow-secondary);
          transition: width 0.3s;
          opacity: 0;
          transition: all 0.2s ease;
       }
       nav ul li a:hover{
-         /* background-color: var(--blue-primary);
-         /* text-decoration: underline; */
-         color: var(--yellow-primary);
+         color: var(--yellow-secondary);
       }
       nav ul li a:hover::after{
          top: -7px;

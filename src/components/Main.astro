@@ -8,7 +8,7 @@ import stack from "../assets/stacks-azul.png";
       <img src={escudoBoca.src} alt="Escudo de Boca Juniors">
       <h1>Boca Juniors</h1>
       <p>El club más grande de América</p>
-      <a href="##"><i class='bx bxs-down-arrow' ></i></a>
+      <a href="#club"><i class='bx bxs-down-arrow' ></i></a>
    </div>
 </main>   
 <style>
@@ -40,7 +40,7 @@ import stack from "../assets/stacks-azul.png";
    }
    .presentation p{
       font-size: 1.1rem;
-      color: var(--yellow-primary);
+      color: var(--yellow-secondary);
       margin-top: .1rem;
    }
    .presentation a{
@@ -59,9 +59,18 @@ import stack from "../assets/stacks-azul.png";
       transform: translateY(4px);
    }
 
-   @media (min-width: 768px){
+   @media screen and (min-width: 768px){
       main{
          height: calc(100vh - 88px);
+      }
+      .presentation h1{
+         font-size: 3.2rem;
+      }
+      .presentation p{
+         font-size: 1.25rem;
+      }
+      .presentation a{
+         margin-top: 0.2rem;
       }
    }
 </style>
