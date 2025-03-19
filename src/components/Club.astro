@@ -1,0 +1,99 @@
+<section id="club" class="section-club">
+   <h2>Club</h2>
+   <div class="container-description">
+      <div class="item-description">
+         <p><span>Fundado el 3 de abril de 1905</span> por seis vecinos adolescentes hijos de italiano</p>
+      </div>
+      <div class="item-description">
+         <p>Entidad deportiva argentina con sede en el barrio de <span>La Boca, Ciudad Autónoma de Buenos Aires</span></p>
+      </div>
+      <div class="item-description">
+         <p>Tuvo tres o cuatro camisetas antes de adoptar la definitiva, de <span>color azul con una amplia banda amarilla horizontal</span></p>
+      </div>
+      <div class="item-description">
+         <p>Equipo con <span>mayor cantidad de títulos oficiales</span> en la historia del fútbol argentino</p>
+      </div>
+      <div class="item-description">
+         <p>En el plano internacional es la cuarta institución con mayor cantidad de copas en el mundo a nivel confederativo e interconfederativo <span>(18)</span></p>
+      </div>
+      <div class="item-description">
+         <p>A partir del 8 de junio de 2015, Boca Juniors batió el récord de <span>mayor permanencia ininterrumpida</span> en Primera División, con 37.312 días</p>
+      </div>      
+   </div>
+</section>
+
+<style>
+   .section-club{
+      width: 100%;
+      background-color: var(--blue-primary);
+      padding-bottom: 11rem;
+   }
+   .section-club h2{
+      margin: 0;
+      font-size: 2.65rem;
+      color: var(--yellow-primary);
+      padding: 1rem;
+      margin-top: -1.2rem;
+      margin-bottom: 1.8rem;
+      text-align: center;
+   }
+   .container-description{
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+      gap: 1.8rem;
+   }
+   .item-description{
+      width: 80%;
+      max-width: 450px;
+      height: 80px;
+      font-size: 1rem;
+      color: var(--blue-primary);
+      background: #FDE148;
+      background: linear-gradient(180deg, #FDE148, #ECC700);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+      border-radius: 15px;
+      transition: all 0.2s ease;
+   }
+   .item-description:nth-child(even):hover{
+      transform: scale(1.05) rotate(2deg);
+   }
+   .item-description:nth-child(odd):hover{
+      transform: scale(1.05) rotate(-2deg);
+   }
+   .item-description p{
+      margin: 0;
+      width: 85%;
+      margin: 0 auto;
+   }
+   .item-description span{
+      font-size: 1.05rem;
+      font-weight: 700;
+   }
+
+   @media screen and (min-width: 768px){
+      .section-club h2{
+         font-size: 3rem;
+         margin-bottom: 2.4rem;
+      }
+      .container-description{
+         /* dps columnas maximo width 335px */
+         grid-template-columns: repeat(2, 1fr);
+         gap: 2rem;
+      }
+   }
+
+   @media screen and (min-width: 1024px){
+      .section-club h2{
+         margin-bottom: 2.8rem;
+      }
+   }
+   
+</style>
