@@ -1,0 +1,174 @@
+---
+import { IDOLS } from "../assets/helpers/idols";
+---
+
+<section id="idols" class="section-idols">
+   <h2>Idolos</h2>
+   <div class="container-gallery">
+      {
+         IDOLS.map((idol) => (
+            <article class={`box box-${idol.id}`}>
+               <img src={idol.image} alt={`Foto de ${idol.name}`} decoding="async" loading="lazy" />
+
+                <div class="name-idol">
+                  <div>
+                     {idol.name.map(iName => (
+                        <p>{iName}</p>
+                     ))}
+                  </div>
+               </div>
+            </article>
+         ))
+      }
+  </div>
+</section>
+
+<style>     
+.section-idols{
+   width: 100%;
+   background-color: var(--yellow-primary);
+   padding-bottom: 11rem;
+}
+.section-idols h2{
+   font-size: 2.65rem;
+   color: var(--blue-primary);
+   text-align: center;
+   padding: 1rem;
+   margin-top: -1.25rem;
+   margin-bottom: 1.8rem;
+}
+.section-idols .container-gallery{
+   width: 90%;
+   max-width: 1000px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+   justify-items: center;
+   align-items: center;
+   gap: 1.8rem;
+}
+.container-gallery .box{
+   position: relative;
+   width: 100%;
+   max-width: 300px;
+   height: 280px;
+   background-color: var(--blue-primary);
+   border-radius: 15px;
+   overflow: hidden;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+.container-gallery .box:hover{
+   transform: translateY(-8px);
+}
+.container-gallery .box img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: top;
+   transition: all 0.25s ease;
+}
+.container-gallery .box .name-idol{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 85%;
+   background-image: linear-gradient(to top, var(--blue-secondary-op), transparent);
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   flex-direction: column;
+   transform: translateY(100%);
+   transition: all 0.25s ease;
+}
+.container-gallery .box .name-idol div{
+   margin-right: .6rem;
+   margin-bottom: .2rem;
+}
+.container-gallery .box .name-idol p{
+   width: 100%;
+   color: var(--yellow-primary);
+   font-size: 1.25rem;
+   font-weight: 400;
+   margin: 0;
+   text-align: left;
+}
+.container-gallery .box .name-idol p::first-letter{
+   /* font-family: monospace; */
+   font-size: 1.65rem;
+   font-weight: 700;
+}
+.container-gallery .box:hover .name-idol{
+   transform: translateY(0);
+}
+.container-gallery .box:hover img{
+   filter: contrast(1.25) grayscale(25%);
+}
+
+@media screen and (min-width: 768px){
+   .section-idols h2{
+      font-size: 3rem;
+   }
+}      
+
+@media screen and (min-width: 1000px){
+   
+.section-idols .container-gallery {
+   height: 75vh;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(6, 1fr);
+   gap: 1.4rem;
+}
+.container-gallery .box{
+   height: 100%;
+}
+    
+.container-gallery .box-1 {
+   grid-row: span 2 / span 2;
+}
+
+.container-gallery .box-2 {
+   grid-row: span 4 / span 4;
+   grid-column-start: 1;
+   grid-row-start: 3;
+}
+
+.box-3 {
+   grid-row: span 4 / span 4;
+   grid-column-start: 2;
+   grid-row-start: 1;
+}
+
+.box-4 {
+   grid-row: span 2 / span 2;
+   grid-column-start: 2;
+   grid-row-start: 5;
+}
+
+.box-5 {
+   grid-row: span 2 / span 2;
+   grid-column-start: 3;
+   grid-row-start: 1;
+}
+
+.box-6 {
+   grid-row: span 4 / span 4;
+   grid-column-start: 3;
+   grid-row-start: 3;
+}
+
+.box-7 {
+   grid-row: span 4 / span 4;
+   grid-column-start: 4;
+   grid-row-start: 1;
+}
+
+.box-8 {
+   grid-row: span 2 / span 2;
+   grid-column-start: 4;
+   grid-row-start: 5;
+}
+        
+}
+</style>
