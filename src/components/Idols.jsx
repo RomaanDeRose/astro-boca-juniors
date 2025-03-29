@@ -8,7 +8,7 @@ const ModalIdol = ({ idol, closeModal }) => {
 
   return (
     <div className={`modal modal-${id}`} onClick={closeModal}>
-      <i class="bx bx-x"></i>
+      <i className="bx bx-x"></i>
       <img
         src={image}
         alt={`Foto de ${name}`}
@@ -48,6 +48,7 @@ function Idols() {
   const handleIdolClick = (id) => {
     const idolSelected = IDOLS.find((idol) => idol.id === id);
     setSelectedIdol(idolSelected);
+
     setShowIdol(true);
   };
 
