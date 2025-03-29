@@ -14,8 +14,6 @@ const ModalIdol = ({ idol, closeModal }) => {
         alt={`Foto de ${name}`}
         decoding="async"
         loading="lazy"
-        width={300}
-        height={300}
       />
       <p>{name.map((n) => n + " ")}</p>
     </div>
