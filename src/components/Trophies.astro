@@ -1,0 +1,72 @@
+---
+import { TROPHIES } from "../assets/helpers/trophies.ts"
+import Trophy from "./Trophy.astro"
+---
+
+<section class="section-trophies" id="trophies">
+   <h2>Títulos</h2>
+   <div class="trophies-container">
+      {
+         TROPHIES.map(({ id, name, champion, maxWidth, image }) => (
+            <Trophy
+               id={id}
+               name={name}
+               champion={champion}
+               maxWidth={maxWidth}
+               image={image}
+            />
+         ))
+      }
+   </div>
+</section>
+
+<style>
+   .section-trophies {
+      width: 100%;
+      background-color: var(--blue-primary);
+      padding-bottom: 11rem;
+   }  
+
+   .section-trophies h2 {
+      margin: 0;
+      font-size: 2.65rem;
+      color: var(--yellow-primary);
+      padding: 1rem;
+      margin-top: -1.2rem;
+      margin-bottom: 1.8rem;
+      text-align: center;
+   }
+
+   .trophies-container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+      gap: 3rem;
+   }
+
+   @media screen and (min-width: 768px){
+      .section-trophies h2{
+         font-size: 3rem;
+      }
+      .trophies-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         gap: 4rem;
+      }
+   }
+
+   @media screen and (min-width: 1024px){
+      .trophies-container {
+         display: grid;
+         grid-template-columns: repeat(6, 1fr);
+         grid-template-rows: repeat(4, 1fr);
+         gap: 1rem;
+      }
+   }
+</style>

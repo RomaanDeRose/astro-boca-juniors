@@ -1,0 +1,93 @@
+---
+const { id, name, champion, maxWidth, image } = Astro.props
+---
+
+<div class=`card-trophy trophy-${id}`>
+   <article style=`max-width: ${maxWidth}px`>
+      <img src={image} alt=`Foto de la ${name}`>
+   </article>
+   <p>{champion}</p>
+</div>
+
+<style>
+   .card-trophy {
+      width: 90%;
+      max-width: 400px;
+      height: 190px;
+      background: #FDE148;
+      background: linear-gradient(180deg, #FDE148, #ECC700);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      border-radius: 14px;
+      margin: 0 auto;
+      padding: 2rem 3rem;
+   }
+
+   .card-trophy article {
+      width: 50%;
+   }
+   .card-trophy article img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+   }
+
+   .card-trophy p {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--blue-primary);
+   }
+
+   @media screen and (min-width: 768px){
+      .card-trophy p {
+         font-size: 4rem;
+      }
+   }
+
+   @media screen and (min-width: 1024px){
+      .card-trophy{
+         width: 100%;
+         max-width: 600px;
+         height: 220px;
+         padding: 2rem 3.5rem;
+         transition: all 0.25s ease;
+      }
+      .card-trophy:hover {
+         transform: translateY(-6px);
+         box-shadow: 0 5px 20px -1.5px rgba(0, 0, 0, 0.2);
+      }
+
+      .trophy-1 {
+         grid-column: span 3 / span 3;
+         grid-row: span 2 / span 2;
+      }
+
+      .trophy-2 {
+         grid-column: span 3 / span 3;
+         grid-row: span 2 / span 2;
+         grid-column-start: 4;
+      }
+
+      .trophy-3 {
+         grid-column: span 2 / span 2;
+         grid-row: span 2 / span 2;
+         grid-row-start: 3;
+      }
+
+      .trophy-4 {
+         grid-column: span 2 / span 2;
+         grid-row: span 2 / span 2;
+         grid-column-start: 3;
+         grid-row-start: 3;
+      }
+
+      .trophy-5 {
+         grid-column: span 2 / span 2;
+         grid-row: span 2 / span 2;
+         grid-column-start: 5;
+         grid-row-start: 3;
+      }
+   }
+</style>
