@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: var(--blue-opacity-60);
+  background-color: var(--blue-opacity-75);
   backdrop-filter: blur(20px);
   display: flex;
   justify-content: center;
@@ -26,12 +26,12 @@
   position: absolute;
   top: 0.7rem;
   right: 0.7rem;
-  background-color: var(--blue-primary);
-  color: var(--yellow-primary);
+  background-color: var(--yellow-primary);
+  color: var(--blue-primary);
   font-size: 2rem;
   padding: 0.5rem;
   border-radius: 50%;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -48,9 +48,12 @@
 .modal p {
   color: var(--yellow-primary);
   font-size: 2.5rem;
-  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: 800;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
 }
 
 @media screen and (min-width: 768px) {
