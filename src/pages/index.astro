@@ -5,6 +5,7 @@ import Main from '../components/Main.astro';
 import Wave from '../components/Wave.astro';
 import Club from '../components/Club.astro';
 import Idols from '../components/Idols.jsx';
+import Trophies from '../components/Trophies.astro';
 ---
 
 <Layout title="Boca Juniors, el más grande de America">
@@ -15,4 +16,5 @@ import Idols from '../components/Idols.jsx';
 	<Wave color="var(--yellow-primary)" background="var(--blue-primary)"/>   
 	<Idols client:visible/>
 	<Wave color="var(--blue-primary)" background="var(--yellow-primary)"/>   
-</Layout>
+	<Trophies />
+</Layout>  
